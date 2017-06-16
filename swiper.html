@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="swiper-3.3.1.min.css" rel="stylesheet"/>
+    <script src="swiper-3.3.1.min.js"></script>
+    <style>
+        .swiper-container {
+            width: 1024px;
+            height: 640px;
+        }
+
+        .swiper-container img{
+            width: 1024px;
+            height: 640px;
+        }
+        h3{
+            text-align: center;
+            padding-top: 50px;
+            font-size: 30px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<h3>swiper 支持手机端滑动轮播图插件</h3>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="1.jpg">
+        </div>
+        <div class="swiper-slide">
+            <img src="2.jpg">
+        </div>
+        <div class="swiper-slide">
+            <img src="3.jpg">
+        </div>
+        <div class="swiper-slide">
+            <img src="4.jpg">
+        </div>
+        <div class="swiper-slide">
+            <img src="5.jpg">
+        </div>
+
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- 如果需要滚动条 -->
+   <!-- <div class="swiper-scrollbar"></div>-->
+</div>
+
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        autoplay: 3000,   //自动轮播参数
+        pagination: '.swiper-pagination',   //分页器class
+        loop:true,   //无限循环
+        grabCursor: true,    //鼠标放上时变成手的形状
+        paginationClickable :true,   //点击分页切换图像
+        // 如果需要前进后退按钮
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev'
+
+    })
+
+</script>
+</body>
+</html>
